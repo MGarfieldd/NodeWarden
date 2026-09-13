@@ -15,6 +15,9 @@ run_worker_first = true
 [triggers]
 crons = [ "*/5 * * * *" ]
 
+[observability]
+enabled = true
+
 [[d1_databases]]
 binding = "DB"
 database_name = "nodewarden-db"
@@ -22,7 +25,6 @@ database_name = "nodewarden-db"
 [[durable_objects.bindings]]
 name = "NOTIFICATIONS_HUB"
 class_name = "NotificationsHub"
-
 [[durable_objects.bindings]]
 name = "BACKUP_TRANSFER_RUNNER"
 class_name = "BackupTransferRunner"
